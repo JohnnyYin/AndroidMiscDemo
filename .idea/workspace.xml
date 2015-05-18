@@ -8,29 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc5cbfbd-151c-4b87-8cc5-ce1bbcf43431" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WidgetLib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/graphics_demo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AndroidMiscDemo.iml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidDemo.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hs_err_pid2768.log" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnimationDemo/AnimationDemo.iml" afterPath="$PROJECT_DIR$/AnimationDemo/AnimationDemo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParabolaDemo/ParabolaDemo.iml" afterPath="$PROJECT_DIR$/ParabolaDemo/ParabolaDemo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PorterDuffDemo/PorterDuffDemo.iml" afterPath="$PROJECT_DIR$/PorterDuffDemo/PorterDuffDemo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RotateAnimation/RotateAnimation.iml" afterPath="$PROJECT_DIR$/RotateAnimation/RotateAnimation.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StackViewDemo/StackViewDemo.iml" afterPath="$PROJECT_DIR$/StackViewDemo/StackViewDemo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StickyBroadcastDemo/StickyBroadcastDemo.iml" afterPath="$PROJECT_DIR$/StickyBroadcastDemo/StickyBroadcastDemo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnimationDemo/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/AnimationDemo/src/main/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnimationDemo/build.gradle" afterPath="$PROJECT_DIR$/AnimationDemo/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParabolaDemo/build.gradle" afterPath="$PROJECT_DIR$/ParabolaDemo/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PorterDuffDemo/build.gradle" afterPath="$PROJECT_DIR$/PorterDuffDemo/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RotateAnimation/build.gradle" afterPath="$PROJECT_DIR$/RotateAnimation/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StackViewDemo/build.gradle" afterPath="$PROJECT_DIR$/StackViewDemo/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StickyBroadcastDemo/build.gradle" afterPath="$PROJECT_DIR$/StickyBroadcastDemo/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/calltracker/build.gradle" afterPath="$PROJECT_DIR$/calltracker/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/calltracker/calltracker.iml" afterPath="$PROJECT_DIR$/calltracker/calltracker.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WidgetLib/WidgetLib.iml" afterPath="$PROJECT_DIR$/WidgetLib/WidgetLib.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AndroidMiscDemo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,6 +32,9 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="AndroidMiscDemo" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -6439,7 +6423,7 @@
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../workspace/Android" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="android.sdk.path" value="/Applications/Development/Android/sdk" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="04085339e0785ae6" />
@@ -6767,12 +6751,12 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3292517" sideWeight="0.49713877" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3292517" sideWeight="0.49713877" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292517" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
