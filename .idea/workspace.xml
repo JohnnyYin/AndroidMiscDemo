@@ -7,27 +7,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc5cbfbd-151c-4b87-8cc5-ce1bbcf43431" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WidgetLib/WidgetLib.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/graphics_demo/graphics_demo.iml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.3/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.3/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.3/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.3/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.3/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.3/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.3/taskArtifacts/outputFileStates.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.3/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnimationDemo/AnimationDemo.iml" afterPath="$PROJECT_DIR$/AnimationDemo/AnimationDemo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParabolaDemo/ParabolaDemo.iml" afterPath="$PROJECT_DIR$/ParabolaDemo/ParabolaDemo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PorterDuffDemo/PorterDuffDemo.iml" afterPath="$PROJECT_DIR$/PorterDuffDemo/PorterDuffDemo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RotateAnimation/RotateAnimation.iml" afterPath="$PROJECT_DIR$/RotateAnimation/RotateAnimation.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StackViewDemo/StackViewDemo.iml" afterPath="$PROJECT_DIR$/StackViewDemo/StackViewDemo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StickyBroadcastDemo/StickyBroadcastDemo.iml" afterPath="$PROJECT_DIR$/StickyBroadcastDemo/StickyBroadcastDemo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnimationDemo/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/AnimationDemo/src/main/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StickyBroadcastDemo/build.gradle" afterPath="$PROJECT_DIR$/StickyBroadcastDemo/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/calltracker/calltracker.iml" afterPath="$PROJECT_DIR$/calltracker/calltracker.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="bc5cbfbd-151c-4b87-8cc5-ce1bbcf43431" name="Default" comment="" />
     <ignored path="AndroidMiscDemo.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -150,8 +130,8 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/StackViewDemo/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4903226">
-              <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.40860215">
+              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -6639,20 +6619,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AndroidMiscDemo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AndroidMiscDemo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AnimationDemo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
         <option name="show-excluded-files" value="false" />
       </pane>
@@ -7237,8 +7203,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/StackViewDemo/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4903226">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.40860215">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
           <folding />
         </state>
       </provider>
