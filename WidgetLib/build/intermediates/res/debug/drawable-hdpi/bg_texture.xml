@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<bitmap android:src="@drawable/skin_background" android:antialias="true" android:dither="true" android:tileMode="disabled"
-  xmlns:android="http://schemas.android.com/apk/res/android" /><!-- From: file:/Users/Johnny/Documents/work/Repository/git/AndroidDemo/WidgetLib/res/drawable-hdpi/bg_texture.xml -->
