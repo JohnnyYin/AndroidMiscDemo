@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <Button
+        android:id="@+id/BounceScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BounceScrollView" />
+
+    <Button
+        android:id="@+id/ScoreBoardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ScoreBoardView" />
+    
+    <Button
+        android:id="@+id/scale_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="缩放Layout" />
+    
+    <Button
+        android:id="@+id/my_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="不能垂直滚动的GridView" />
+    
+    <Button
+        android:id="@+id/curve_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="曲线View" />
+
+</LinearLayout>

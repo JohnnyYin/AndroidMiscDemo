@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.widgetlib.BounceScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_texture"
+    android:fadingEdge="none"
+    android:scrollbarThumbVertical="@drawable/scrollbar_handle_vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="#A54545"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="400.0dp"
+            android:text="hhhhhhhhh" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="400.0dp"
+            android:text="ssssss" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="400.0dp"
+            android:text="ffffffff" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="400.0dp"
+            android:text="wwwwwwww" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="400.0dp"
+            android:text="wwwwwwww" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="400.0dp"
+            android:text="wwwwwwww" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="400.0dp"
+            android:text="wwwwwwww" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="400.0dp"
+            android:text="wwwwwwww" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="400.0dp"
+            android:text="wwwwwwww" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="400.0dp"
+            android:text="wwwwwwww" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="400.0dp"
+            android:text="wwwwwwww" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="400.0dp"
+            android:text="wwwwwwww" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="400.0dp"
+            android:text="wwwwwwww" />
+    </LinearLayout>
+
+</com.example.widgetlib.BounceScrollView><!-- From: file:/Users/Johnny/Documents/work/Repository/git/AndroidDemo/WidgetLib/res/layout/activity_bounce_scroll_view.xml -->

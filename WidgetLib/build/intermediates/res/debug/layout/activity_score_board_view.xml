@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScoreBoardViewActivity" >
+
+    <com.example.widgetlib.ScoreBoardView
+        android:id="@+id/score_board"
+        android:layout_width="50.0dp"
+        android:layout_height="50.0dp"
+        android:layout_margin="0.0dp"
+        android:gravity="bottom"
+        android:orientation="vertical" />
+
+    <com.example.widgetlib.ScoreBoardView
+        android:id="@+id/score_board2"
+        android:layout_toRightOf="@+id/score_board"
+        android:layout_width="50.0dp"
+        android:layout_height="50.0dp"
+        android:layout_margin="0.0dp"
+        android:gravity="bottom"
+        android:orientation="vertical" />
+
+</RelativeLayout><!-- From: file:/Users/Johnny/Documents/work/Repository/git/AndroidDemo/WidgetLib/res/layout/activity_score_board_view.xml -->

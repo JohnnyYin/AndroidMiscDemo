@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/Johnny/Documents/work/Repository/git/AndroidDemo/ParabolaDemo/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28">
+        <dex dex="/Users/Johnny/Documents/work/Repository/git/AndroidDemo/ParabolaDemo/build/intermediates/pre-dexed/debug/classes-1176d6150cb3393af67ea4cdf67d9e29bc240ea3.jar" />
+    </item>
+    <item
+        jar="/Users/Johnny/Documents/work/Repository/git/AndroidDemo/RotateAnimation/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28">
+        <dex dex="/Users/Johnny/Documents/work/Repository/git/AndroidDemo/RotateAnimation/build/intermediates/pre-dexed/debug/classes-3d0e04bae9c45565b3ec4a5bf06bcca98a58f5cc.jar" />
+    </item>
+    <item
+        jar="/Users/Johnny/Documents/work/Repository/git/AndroidDemo/AnimationDemo/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28">
+        <dex dex="/Users/Johnny/Documents/work/Repository/git/AndroidDemo/AnimationDemo/build/intermediates/pre-dexed/debug/classes-af18416b6924c6df22cbfb1f939e0b0d4fa1018c.jar" />
+    </item>
+    <item
+        jar="/Applications/Development/Android/sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="/Users/Johnny/Documents/work/Repository/git/AndroidDemo/RotateAnimation/build/intermediates/pre-dexed/debug/support-v4-19.1.0-d150fd0d4bf47073f98d156fef8f57dd10976a28.jar" />
+    </item>
+
+</items>

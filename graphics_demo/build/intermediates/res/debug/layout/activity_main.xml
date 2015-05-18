@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <Button
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="折线图" />
+
+    <Button
+        android:id="@+id/piechart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="饼状图" />
+
+    <Button
+        android:id="@+id/shader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Shader演示" />
+
+    <Button
+        android:id="@+id/xfermode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Xfermode演示" />
+
+    <Button
+        android:id="@+id/scale_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="可缩放的layout演示" />
+
+</LinearLayout><!-- From: file:/Users/Johnny/Documents/work/Repository/git/AndroidMiscDemo/graphics_demo/res/layout/activity_main.xml -->

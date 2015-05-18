@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="50.0dp"
+    android:layout_height="50.0dp"
+    android:background="#A12525"
+    android:gravity="bottom"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="50.0dp"
+        android:layout_height="50.0dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="9"
+        android:textColor="@android:color/black"
+        android:textSize="40.0sp" />
+
+    <TextView
+        android:layout_width="50.0dp"
+        android:layout_height="50.0dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="8"
+        android:textColor="@android:color/black"
+        android:textSize="40.0sp" />
+
+    <TextView
+        android:layout_width="50.0dp"
+        android:layout_height="50.0dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="7"
+        android:textColor="@android:color/black"
+        android:textSize="40.0sp" />
+
+    <TextView
+        android:layout_width="50.0dp"
+        android:layout_height="50.0dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="6"
+        android:textColor="@android:color/black"
+        android:textSize="40.0sp" />
+
+    <TextView
+        android:layout_width="50.0dp"
+        android:layout_height="50.0dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="5"
+        android:textColor="@android:color/black"
+        android:textSize="40.0sp" />
+
+    <TextView
+        android:layout_width="50.0dp"
+        android:layout_height="50.0dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="4"
+        android:textColor="@android:color/black"
+        android:textSize="40.0sp" />
+
+    <TextView
+        android:layout_width="50.0dp"
+        android:layout_height="50.0dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="3"
+        android:textColor="@android:color/black"
+        android:textSize="40.0sp" />
+
+    <TextView
+        android:layout_width="50.0dp"
+        android:layout_height="50.0dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="2"
+        android:textColor="@android:color/black"
+        android:textSize="40.0sp" />
+
+    <TextView
+        android:layout_width="50.0dp"
+        android:layout_height="50.0dp"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@android:color/black"
+        android:textSize="40.0sp" />
+
+    <TextView
+        android:layout_width="50.0dp"
+        android:layout_height="50.0dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@android:color/black"
+        android:textSize="40.0sp" />
+
+</LinearLayout><!-- From: file:/Users/Johnny/Documents/work/Repository/git/AndroidDemo/WidgetLib/res/layout/score_board_view.xml -->
