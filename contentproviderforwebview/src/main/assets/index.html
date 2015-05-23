@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>Test Content Provider for WebView</title>
+    <script type="text/javascript">
+	// 定义ContentProvider
+	var content_provider = "content://com.johnnyyin.contentproviderforwebview.ImageContentProvider/";
+	var imgs;
+
+	function on_image_loaded(i, ok) {
+		if (i < 0 || i >= imgs.length || !ok)
+			return;
+		var _this = null;
+		if (imgs && imgs.length > 0) {
+			_this = imgs[i];
+		}
+		if (_this == null)
+			return;
+		var src_path = _this.getAttribute("src_path");
+		_this.setAttribute("src", content_provider + "showimg?path=" + src_path);
+	}
+
+	function loadimg(index) {
+		path = document.getElementById("imgpath").value;
+		imgs[index].setAttribute("src_path", path);
+		imgs[index].setAttribute("src", content_provider + "loadimg?path=" + path + "&index=" + index);
+	}
+
+	function init() {
+		imgs = document.getElementsByTagName("img");
+	}
+
+	document.addEventListener("DomContentLoaded", init(), false);
+    </script>
+</head>
+<body>
+<h3>Test Content Provider for WebView</h3>
+<input name="key" type="text" id="imgpath" size="30"/>
+<input type="button" value="load" onclick="javascript:loadimg(0)"/>
+<br/>
+<!-- 方式一：通过ContentProvider -->
+<img src="content://com.johnnyyin.contentproviderforwebview.ImageContentProvider/loadimg?path=test.jpg&index=0"
+     src_path="test.jpg" width="300">
+<!-- 方式二：通过覆盖android.webkit.WebViewClient.shouldInterceptRequest(android.webkit.WebView, android.webkit.WebResourceRequest) 方法-->
+<img src="img://test2.jpg" width="300">
+</body>
+</html>
