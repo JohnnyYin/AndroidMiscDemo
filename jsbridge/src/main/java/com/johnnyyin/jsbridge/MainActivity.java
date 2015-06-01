@@ -1,24 +1,14 @@
 package com.johnnyyin.jsbridge;
 
 import android.app.Activity;
-import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
 import android.webkit.WebChromeClient;
-import android.webkit.WebResourceRequest;
-import android.webkit.WebResourceResponse;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
-
-public class MainActivity extends Activity implements JSBridge.OnJsMsgListener {
+public class MainActivity extends Activity implements JSBridge.OnJsMsgListener, View.OnClickListener {
     private WebView mWebView;
     private JSBridge mJsBridge;
 
@@ -26,16 +16,21 @@ public class MainActivity extends Activity implements JSBridge.OnJsMsgListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        findViewById(R.id.calljs).setOnClickListener(this);
+        mWebView = (WebView) findViewById(R.id.webview);
+
         mJsBridge = new JSBridge();
         mJsBridge.setOnJsMsgListener(this);
-        mWebView = (WebView) findViewById(R.id.webview);
+        mJsBridge.bind(mWebView);
         mWebView.getSettings().setJavaScriptEnabled(true);
         mWebView.setWebViewClient(new WebViewClient() {
 
             @Override
             public void onLoadResource(WebView view, String url) {
-                super.onLoadResource(view, url);
-                mJsBridge.checkBridgeSchema(url, mWebView);
+                if (mJsBridge == null || !mJsBridge.checkBridgeSchema(url)) {
+                    super.onLoadResource(view, url);
+                }
             }
         });
         mWebView.setWebChromeClient(new WebChromeClient());
@@ -47,8 +42,20 @@ public class MainActivity extends Activity implements JSBridge.OnJsMsgListener {
         if (jsMsg == null) {
             return;
         }
-        if ("hello".equals(jsMsg.func)) {
-            Toast.makeText(this, "Hello", Toast.LENGTH_SHORT).show();
+        if ("toast".equals(jsMsg.func)) {
+            Toast.makeText(this, jsMsg.params.optString("msg"), Toast.LENGTH_SHORT).show();
+            jsMsg.callbackJs(new JSBridge.JsCallback(jsMsg.__callback_id, "Hello, JavaScript.\n--callback from native."));
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.calljs:
+                if (mJsBridge != null) {
+                    mJsBridge.callJs("toast", "\"Hello, JavaScript.\\n--send from native.\"");
+                }
+                break;
         }
     }
 }

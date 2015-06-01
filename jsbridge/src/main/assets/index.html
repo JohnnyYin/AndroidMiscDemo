@@ -1,13 +1,19 @@
 <html>
 <head>
-    <title>Test Content Provider for WebView</title>
+    <title>Test New JsBridge</title>
 </head>
 <body>
-<h3>Test Content Provider for WebView</h3>
-<input type="button" value="call" onclick="javascript:WeixinJSBridge.call('hello', null);"/>
-<input type="button" value="_fetchQueue" onclick="javascript:WeixinJSBridge._fetchQueue();"/>
+<h3>Test New JsBridge</h3>
+<input type="button" value="Call Native"
+       onclick="javascript:WeixinJSBridge.call('toast', {'msg':'Hello, Java.\n--send from JavaScript.'}, toast);"/>
 <br/>
 
+<script type="text/javascript">
+function toast(msg) {
+    alert(msg);
+}
+</script>
+<!-- jsbridge -->
 <script type="text/javascript">
 // UTF8
 var UTF8 = {
