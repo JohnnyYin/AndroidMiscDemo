@@ -1,0 +1,12 @@
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/right_drawable">
+    <target
+        android:name="rotationGroup"
+        android:animation="@anim/right_rotation" />
+    <target
+        android:name="v1"
+        android:animation="@anim/right_path_morph_v1" />
+    <target
+        android:name="v2"
+        android:animation="@anim/right_path_morph_v2" />
+</animated-vector>

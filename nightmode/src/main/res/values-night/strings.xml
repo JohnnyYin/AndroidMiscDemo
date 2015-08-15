@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NightMode</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="night_mode">日间模式</string>
+</resources>
