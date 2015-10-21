@@ -2,27 +2,77 @@ package com.johnnyyin.temp;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
+import android.widget.BaseAdapter;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
-    private TextView mText;
+    private ListView mListView;
+    boolean flag;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mText = (TextView) findViewById(R.id.text_view);
-        mText.setOnClickListener(new View.OnClickListener() {
+
+        findViewById(R.id.text).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TranslateAnimation animation = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 3.0f);
-                animation.setDuration(1000);
-                mText.startAnimation(animation);
+                if (!flag) {
+                    Animation animation = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f,
+                            Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 1.0f);
+                    animation.setDuration(300);
+                    animation.setFillAfter(true);
+                    animation.setFillEnabled(true);
+                    v.startAnimation(animation);
+                    flag = true;
+                } else {
+                    Animation animation = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f,
+                            Animation.RELATIVE_TO_SELF, 1.0f, Animation.RELATIVE_TO_SELF, 0.0f);
+                    animation.setDuration(300);
+                    animation.setFillAfter(true);
+                    animation.setFillEnabled(true);
+                    v.startAnimation(animation);
+                    flag = false;
+                }
+            }
+        });
+
+        mListView = (ListView) findViewById(R.id.list_view);
+        mListView.setAdapter(new BaseAdapter() {
+            @Override
+            public int getCount() {
+                return 300;
+            }
+
+            @Override
+            public Object getItem(int position) {
+                return position;
+            }
+
+            @Override
+            public long getItemId(int position) {
+                return position;
+            }
+
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
+                if (convertView != null) {
+                    ((TextView) convertView.findViewById(R.id.text)).setText("item: " + position);
+                } else {
+                    convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, parent, false);
+                }
+                return convertView;
             }
         });
     }

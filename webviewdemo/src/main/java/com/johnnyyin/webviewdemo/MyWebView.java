@@ -1,7 +1,9 @@
 package com.johnnyyin.webviewdemo;
 
 import android.content.Context;
+import android.graphics.Canvas;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.webkit.WebView;
 
 /**
@@ -20,8 +22,9 @@ public class MyWebView extends WebView {
         super(context, attrs, defStyleAttr);
     }
 
-    public MyWebView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
+    @Override
+    public void draw(Canvas canvas) {
+        super.draw(canvas);
+        Log.e("SS", "draw:" + getContext().getClass().getName());
     }
-
 }
