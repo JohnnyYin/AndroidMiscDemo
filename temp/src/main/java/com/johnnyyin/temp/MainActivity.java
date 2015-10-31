@@ -47,6 +47,7 @@ public class MainActivity extends Activity {
                 }
             }
         });
+        Log.e("SS", getResources().getResourceEntryName(R.layout.activity_main) + ":" + getResources().getIdentifier("activity_main", "layout", getPackageName()));
 
         mListView = (ListView) findViewById(R.id.list_view);
         mListView.setAdapter(new BaseAdapter() {
@@ -67,14 +68,14 @@ public class MainActivity extends Activity {
 
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
-                if (convertView != null) {
-                    ((TextView) convertView.findViewById(R.id.text)).setText("item: " + position);
-                } else {
+                if (convertView == null) {
                     convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, parent, false);
                 }
+                ((TextView) convertView.findViewById(R.id.text)).setText("item: " + position);
                 return convertView;
             }
         });
+
     }
 
     @Override
