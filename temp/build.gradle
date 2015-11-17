@@ -1,6 +1,5 @@
 apply plugin: 'com.android.application'
 
-println "${TEST1.toBoolean()}:hhhh:${TEST2.toBoolean()}:hhhh:${TEST3.toBoolean()}:hhhh:${TEST4.toBoolean()}:hhhh"
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.1"

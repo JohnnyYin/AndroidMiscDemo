@@ -2,10 +2,13 @@ package com.johnnyyin.webviewdemo;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewParent;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -81,6 +84,7 @@ public class WebViewActivity extends Activity {
                 super.onReceivedError(view, errorCode, description, failingUrl);
                 Log.e("SSSS", "errorCode = " + errorCode);
 //                mWebView.loadUrl("file:///android_asset/error.html");
+                showErrorView(view, errorCode, description, failingUrl);
             }
 
             @Override
@@ -98,6 +102,35 @@ public class WebViewActivity extends Activity {
         Map<String, String> map = new HashMap<>();
         mWebView.loadUrl("http://photo.sina.cn", map);
 //        mWebView.loadUrl("file:///android_asset/normal.html");
+    }
+
+    private TextView mErrorView;
+
+    private void showErrorView(WebView webView, int errorCode, String description, String failingUrl) {
+        if (mErrorView == null) {
+            mErrorView = new TextView(webView.getContext());
+            mErrorView.setGravity(Gravity.CENTER);
+            mErrorView.setCompoundDrawablesWithIntrinsicBounds(0, R.mipmap.ic_launcher, 0, 0);
+            mErrorView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mWebView.reload();
+                    hideErrorView(v);
+                }
+            });
+        } else {
+            hideErrorView(mErrorView);
+        }
+        mErrorView.setBackgroundColor(Color.WHITE);
+        mErrorView.setText("errorCode = " + errorCode + ", description = " + description + ", failingUrl = " + failingUrl);
+        webView.addView(mErrorView, webView.getWidth(), webView.getHeight());
+    }
+
+    private void hideErrorView(View errorView) {
+        ViewParent parent = errorView.getParent();
+        if (parent instanceof WebView) {
+            ((WebView) parent).removeView(errorView);
+        }
     }
 
 }

@@ -18,7 +18,6 @@ public class ChildView extends View implements NestedScrollingChild {
     public ChildView(Context context, AttributeSet attrs) {
         super(context, attrs);
         childHelper = new NestedScrollingChildHelper(this);
-        //
         setNestedScrollingEnabled(true);
     }
 
