@@ -1,8 +1,25 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
     </style>
 
+    <style name="AppThemeNight" parent="Theme.AppCompat">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!-- THEME -->
+    <style name="BaseClickable">
+        <item name="android:background">?attr/listChoiceBackgroundIndicator</item>
+        <!--<item name="android:background">?attr/selectableItemBackground</item>-->
+        <!-- 超过边界的RE -->
+        <!--<item name="android:background">?attr/selectableItemBackgroundBorderless</item>-->
+    </style>
+
+    <!-- API < 21 No RippleEffect -->
+    <style name="BaseClickable.OnlyRippleEffect">
+        <item name="android:background">@null</item>
+    </style>
 </resources>

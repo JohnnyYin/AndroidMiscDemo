@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <public name="SelectPopupDialog" id="393216" type="style" />
+    <public name="select_dialog_multichoice" id="0x01090013" type="layout" />
+    <public name="select_dialog_singlechoice" id="0x01090012" type="layout" />
+</resources>

@@ -5,37 +5,38 @@ import android.graphics.drawable.Animatable;
 import android.graphics.drawable.AnimatedVectorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ImageView imageView = (ImageView) findViewById(R.id.animated_vector_drawable);
-        imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Drawable drawable = ((ImageView) v).getDrawable();
-                if (drawable instanceof Animatable) {
-                    ((Animatable) drawable).start();
-                }
-            }
-        });
-        ImageView rightImage = (ImageView) findViewById(R.id.right_animated_vector_drawable);
-        rightImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Drawable drawable = ((ImageView) v).getDrawable();
-                if (drawable instanceof Animatable) {
-                    ((Animatable) drawable).start();
-                }
-            }
-        });
+//        ImageView imageView = (ImageView) findViewById(R.id.animated_vector_drawable);
+//        imageView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Drawable drawable = ((ImageView) v).getDrawable();
+//                if (drawable instanceof Animatable) {
+//                    ((Animatable) drawable).start();
+//                }
+//            }
+//        });
+//        ImageView rightImage = (ImageView) findViewById(R.id.right_animated_vector_drawable);
+//        rightImage.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Drawable drawable = ((ImageView) v).getDrawable();
+//                if (drawable instanceof Animatable) {
+//                    ((Animatable) drawable).start();
+//                }
+//            }
+//        });
     }
 
     @Override

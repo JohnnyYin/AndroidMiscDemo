@@ -38,8 +38,8 @@ public class FloatDialog extends WindowBuilder {
                     lp.height = LayoutParams.WRAP_CONTENT;
                     lp.gravity = Gravity.LEFT | Gravity.TOP;
                     lp.format = PixelFormat.RGBA_8888;
-                    lp.type = LayoutParams.TYPE_APPLICATION_SUB_PANEL;
-                    lp.type = LayoutParams.TYPE_TOAST;
+                    lp.type = LayoutParams.TYPE_APPLICATION_PANEL;
+//                    lp.type = LayoutParams.TYPE_TOAST;
                     lp.flags = LayoutParams.FLAG_ALT_FOCUSABLE_IM
                             | LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH;
                     lp.packageName = BaseApplication.getInst().getPackageName();

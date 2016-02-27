@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         if (mDialog != null) {
             mDialog.close();
         }
-        mDialog = new FloatDialog();
+        mDialog = new FloatDialog(this);
         mDialog.setBackDisable(true);
         mDialog.show(getResources().getDisplayMetrics().widthPixels, 400);
     }

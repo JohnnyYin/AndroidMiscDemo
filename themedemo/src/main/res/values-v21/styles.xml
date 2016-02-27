@@ -1,5 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme" parent="android:Theme.Material.Light">
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+
+        <!--<item name="android:colorBackground">@android:color/holo_red_light</item>-->
+
+        <!-- Main theme colors -->
+        <!--   your app branding color for the app bar -->
+        <!--<item name="android:colorPrimary">@android:color/holo_red_light</item>-->
+        <!--&lt;!&ndash;   darker variant for the status bar and contextual app bars &ndash;&gt;-->
+        <!--<item name="android:colorPrimaryDark">@android:color/holo_red_light</item>-->
+        <!--&lt;!&ndash;   theme UI controls like checkboxes, EdgeEffect and text fields &ndash;&gt;-->
+        <!--<item name="android:colorAccent">@android:color/holo_red_light</item>-->
+    </style>
+
+    <style name="AppThemeNight" parent="Theme.AppCompat">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+
+        <!-- Main theme colors -->
+        <!--   your app branding color for the app bar -->
+        <item name="android:colorPrimary">?android:attr/colorBackground</item>
+        <!--   darker variant for the status bar and contextual app bars -->
+        <item name="android:colorPrimaryDark">?android:attr/colorBackground</item>
+        <!--   theme UI controls like checkboxes, EdgeEffect and text fields -->
+        <item name="android:colorAccent">?android:attr/colorBackground</item>
+    </style>
+
+    <!-- THEME -->
+    <!-- THEME -->
+    <style name="BaseClickable">
+        <item name="android:background">@drawable/item_background</item>
+        <!--<item name="android:background">?attr/selectableItemBackground</item>-->
+        <!-- 超过边界的RE -->
+        <!--<item name="android:background">?attr/selectableItemBackgroundBorderless</item>-->
+    </style>
+    <!-- API < 21 No RippleEffect -->
+    <style name="BaseClickable.OnlyRippleEffect">
     </style>
 </resources>

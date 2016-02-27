@@ -47,27 +47,27 @@ public abstract class WindowBuilder implements OnKeyListener, OnTouchListener {
 //            throw new NullPointerException("view is null");
             mToken = view.getWindowToken();
         }
-//        if (mToken == null) {
-//            mAttachView = new WeakReference<View>(view);
-//            view.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-//                @Override
-//                public void onGlobalLayout() {
-//                    View view = mAttachView.get();
-//                    if (view == null) {
-//                        return;
-//                    }
-//                    view.getViewTreeObserver().removeGlobalOnLayoutListener(this);
-//                    mToken = view.getWindowToken();
-//                    if (mPendingShowRunnable == null) {
-//                        return;
-//                    }
-//                    if (!isShow()) {
-//                        mPendingShowRunnable.run();
-//                    }
-//                    mPendingShowRunnable = null;
-//                }
-//            });
-//        }
+        if (mToken == null) {
+            mAttachView = new WeakReference<View>(view);
+            view.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+                @Override
+                public void onGlobalLayout() {
+                    View view = mAttachView.get();
+                    if (view == null) {
+                        return;
+                    }
+                    view.getViewTreeObserver().removeGlobalOnLayoutListener(this);
+                    mToken = view.getWindowToken();
+                    if (mPendingShowRunnable == null) {
+                        return;
+                    }
+                    if (!isShow()) {
+                        mPendingShowRunnable.run();
+                    }
+                    mPendingShowRunnable = null;
+                }
+            });
+        }
         initBuilder(null);
     }
 
@@ -121,16 +121,16 @@ public abstract class WindowBuilder implements OnKeyListener, OnTouchListener {
     }
 
     public void show() {
-//        if (mToken != null) {
+        if (mToken != null) {
             mWindowBase.show(mRootView, mToken);
-//        } else {
-//            mPendingShowRunnable = new Runnable() {
-//                @Override
-//                public void run() {
-//                    mWindowBase.show(mRootView, mToken);
-//                }
-//            };
-//        }
+        } else {
+            mPendingShowRunnable = new Runnable() {
+                @Override
+                public void run() {
+                    mWindowBase.show(mRootView, mToken);
+                }
+            };
+        }
     }
 
     /**

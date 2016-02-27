@@ -8,6 +8,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -15,6 +16,8 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.TextView;
 
+import java.lang.reflect.Field;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -101,7 +104,8 @@ public class WebViewActivity extends Activity {
 //        mWebView.loadUrl("http://local");
         Map<String, String> map = new HashMap<>();
         mWebView.loadUrl("http://photo.sina.cn", map);
-//        mWebView.loadUrl("file:///android_asset/normal.html");
+//        mWebView.loadUrl("file:///android_asset/index.html");
+
     }
 
     private TextView mErrorView;

@@ -3,7 +3,8 @@
     <title>Test Content Provider for WebView</title>
     <script type="text/javascript">
 	// 定义ContentProvider
-	var content_provider = "content://com.johnnyyin.contentproviderforwebview.ImageContentProvider/";
+	var content_provider = "content://bytedance.contentproviderforwebview2.ImageContentProvider/";
+	//var content_provider = "content://com.johnnyyin.contentproviderforwebview.ImageContentProvider/";
 	var imgs;
 
 	function on_image_loaded(i, ok) {
@@ -33,6 +34,7 @@
     </script>
 </head>
 <body>
+<a href="myapp://test">test</a>
 <h3>Test Content Provider for WebView</h3>
 <input name="key" type="text" id="imgpath" size="30"/>
 <input type="button" value="load" onclick="javascript:loadimg(0)"/>

@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme" parent="android:Theme.Material.Light">
+
+    <style name="AppTheme" parent="android:Theme.Material.Light"></style>
+
+    <style name="SelectPopupDialog">
+        <item name="select_dialog_singlechoice">@layout/select_dialog_singlechoice</item>
+        <item name="select_dialog_multichoice">@layout/select_dialog_multichoice</item>
     </style>
 </resources>
