@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+apply from: project.file('utils.gradle')
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "me.yinzhong.gradledemo"
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha3'
+    testCompile 'junit:junit:4.12'
+}
+// ============================ test ============================
+
+// 测试调用ext中的方法
+testMethod('hello')
+
+// 测试调用ext中的字段
+println "ext.test_var1 = " + test_var1
+
+// 测试gradle中的ext
+gradle.ext.test_var1 = 'test_key'
+
+println "gradle.ext.test_var1 = " + gradle.test_var1
+
+preBuild << {
+    Utils utils = new Utils();
+    utils.hi()
+}
+
+buildscript {
+    dependencies {
+        // 可以添加class路径,然后就可以引用自己写的class啦~~
+        classpath files("utils.jar")
+    }
+}
+
+

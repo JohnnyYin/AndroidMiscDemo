@@ -103,7 +103,7 @@ public class WebViewActivity extends Activity {
 //        mWebView.loadUrl("http://photo.sina.cn/album_4_704_122666.htm?ch=4&wm=3164_0005&vt=4");
 //        mWebView.loadUrl("http://local");
         Map<String, String> map = new HashMap<>();
-        mWebView.loadUrl("http://photo.sina.cn", map);
+        mWebView.loadUrl("https://feedback.uc.cn/self_service/wap/index?instance=taobaoreader&tb_user_name=John&ss=1080x1776&mi=Nexus+5&nw=wifi&tb_cp=0&ei=bTkwAVVnt2Xe%2bHXjPC%2fzXZtYBl7eymGfXQ%3d%3d%0a&tb_user_type=2&pf=145&tb_nick_name=John&nt=2&tb_soft_id=25&ua=Mozilla%2f5.0+(Linux%3b+Android+6.0.1%3b+Nexus+5+Build%2fMOB30H%3b+wv)+AppleWebKit%2f537.36+(KHTML%2c+like+Gecko)+Version%2f4.0+Chrome%2f50.0.2661.86+Mobile+Safari%2f537.36&ip=100.85.123.15&ve=6.0.0.1&tb_login_style=4&bi=1073&ni=bTkwAVVnt2W7ih%2bZfEzwAYcQQCivsQDNDmIZNpyyiqJ9GQ%3d%3d%0a&tb_sn=VGRHsZ3i%2fzwDAJVTme81QRch&uc_param_str=einibicppfmivefrlantcunwsssvjbktchnnsnddds", map);
 //        mWebView.loadUrl("file:///android_asset/index.html");
 
     }

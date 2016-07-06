@@ -1,0 +1,7 @@
+apply plugin: 'com.android.application'
+
+// 测试给引用的gradle添加变量
+ext.test_var1 = 'test'
+ext.testMethod = { name ->
+    println 'utils.method, name = ' + name
+}
