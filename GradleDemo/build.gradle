@@ -1,3 +1,10 @@
+import com.android.build.gradle.internal.scope.AndroidTask
+import com.android.build.gradle.internal.scope.AndroidTaskRegistry
+import com.android.build.gradle.tasks.MergeManifests
+import com.android.sdklib.BuildToolInfo
+
+import java.lang.reflect.Method
+
 apply plugin: 'com.android.application'
 apply from: project.file('utils.gradle')
 
@@ -45,10 +52,75 @@ gradle.ext.test_var1 = 'test_key'
 
 println "gradle.ext.test_var1 = " + gradle.test_var1
 
+
+/**
+ * 修改MergeManifestsTask
+ */
+Task replaceMergeManifestsTask = task('MyMergeManifests') << {
+    android.applicationVariants.all { variant ->
+        tasks.all { task ->
+            println "[LOG] " + task.getName() + ", " + task.getClass()
+        }
+        AndroidTaskRegistry androidTaskRegistry = variant.variantData.taskManager.androidTasks
+//        androidTaskRegistry.create(tasks,
+//                new InstantRunAnchorTask.ConfigAction(variantScope, "Tasks"));
+        String buildType = variant.variantData.name.capitalize()
+        AndroidTask androidTask = androidTaskRegistry.tasks.get("process" + buildType + "Manifest")
+        println "[LOG]androidTaskRegistry = " + androidTaskRegistry + ", " + androidTask
+        AndroidTask newAndroidTask = new AndroidTask(androidTask.name, MyMergeManifests.class)
+        newAndroidTask.upstreamTasks.addAll(androidTask.upstreamTasks)
+        newAndroidTask.downstreamTasks.addAll(androidTask.downstreamTasks)
+        androidTaskRegistry.tasks.put("process" + buildType + "Manifest", newAndroidTask)
+    }
+}
+
+/**
+ * 修改Aapt路径
+ */
+Task modifyAaptPathTask = task('modifyAaptPath') << {
+    android.applicationVariants.all { variant ->
+        BuildToolInfo buildToolInfo = variant.androidBuilder.getTargetInfo().getBuildTools()
+        Method addMethod = BuildToolInfo.class.getDeclaredMethod("add", BuildToolInfo.PathId.class, File.class)
+        addMethod.setAccessible(true)
+        String newAaptPath = "misc/PluginBuild/data/" + (org.gradle.internal.os.OperatingSystem.current().isLinux() ? "linux" : "mac") + "/aapt"
+        addMethod.invoke(buildToolInfo, BuildToolInfo.PathId.AAPT, new File(rootDir, newAaptPath))
+        println "[LOG] new aapt path = " + buildToolInfo.getPath(BuildToolInfo.PathId.AAPT)
+    }
+}
+
+class MyMergeManifests extends MergeManifests {
+    @Override
+    int getVersionCode() {
+        println "[LOG] " + super.getVersionCode()
+        return super.getVersionCode()
+    }
+}
+
+/**
+ * 拷贝Apk文件到宿主工程中
+ */
+Task copyApkFile = task("copyApkFile") << {
+    android.applicationVariants.all { variant ->
+        String buildType = variant.variantData.name.capitalize()
+        tasks.findByName("assemble${buildType}").doLast({
+            String apkPath = projectDir.getAbsolutePath() + "/build/outputs/apk/PluginApp-" + buildType.toLowerCase() + ".apk"
+            String distPath = rootDir.getAbsolutePath() + "/app/src/main/assets/plugin/PluginApp-debug.apk"
+            println "copy apk file: " + apkPath
+            ant.copy(file: apkPath, toFile: distPath)
+        })
+    }
+}
+
 preBuild << {
     Utils utils = new Utils();
     utils.hi()
+
+    // android task
+//    modifyAaptPathTask.execute()
+//    copyApkFile.execute()
+    replaceMergeManifestsTask.execute()
 }
+
 
 buildscript {
     dependencies {

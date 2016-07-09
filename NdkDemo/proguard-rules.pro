@@ -15,3 +15,14 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+# 忽略警告
+-ignorewarnings
+
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+
+-keepclassmembers class com.johnnyyin.ndkdemo.DemoApplication {
+    *** getInstance();
+}

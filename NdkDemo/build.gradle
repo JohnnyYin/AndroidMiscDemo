@@ -6,13 +6,13 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle-experimental:0.2.1'
+        classpath "com.android.tools.build:gradle-experimental:0.7.0-alpha4"
     }
 }
 model {
     android {
         compileSdkVersion = 23
-        buildToolsVersion = "23.0.1"
+        buildToolsVersion = "23.0.2"
 
         defaultConfig.with {
             applicationId = "com.johnnyyin.ndkdemo"
@@ -21,7 +21,7 @@ model {
             versionCode = 1
             versionName = "1.0"
 
-            buildConfigFields.with {
+            buildConfigFields {
                 create() {
                     type = "int"
                     name = "VALUE"
@@ -32,15 +32,30 @@ model {
     }
     android.buildTypes {
         release {
-            minifyEnabled = false
-            proguardFiles += file("proguard-rules.pro")
+            minifyEnabled = true
+            proguardFiles.add(file("proguard-rules.pro"))
+            signingConfig = $("android.signingConfigs.myConfig")
+        }
+        debug {
+            minifyEnabled = true
+            proguardFiles.add(file("proguard-rules.pro"))
+            signingConfig = $("android.signingConfigs.myConfig")
         }
     }
 
     android.ndk {
-        moduleName = "test"
-        ldLibs += "log"
-        stl = "c++_static"
+        moduleName "test"
+        ldLibs.add("log")
+        stl "c++_static"
+    }
+
+    android.signingConfigs {
+        create("myConfig") {
+            storeFile "../my.keystore"
+            storePassword "123456789"
+            keyAlias "android.keystore"
+            keyPassword "123456789"
+        }
     }
 }
 

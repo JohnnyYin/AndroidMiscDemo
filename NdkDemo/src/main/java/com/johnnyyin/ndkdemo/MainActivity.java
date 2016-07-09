@@ -1,19 +1,17 @@
 package com.johnnyyin.ndkdemo;
 
 import android.content.Context;
-import android.media.MediaPlayer;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
 
-import java.lang.reflect.Field;
-import java.util.Arrays;
+import java.security.MessageDigest;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,54 +26,37 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("SS", "MainActivity.onClick:MediaPlayer = " + MediaPlayer.class.getClassLoader() + "");
-                Log.d("SS", "MainActivity.onClick:MainActivity = " + MainActivity.class.getClassLoader() + "");
-                AllocTest.monifyClassLoader(MediaPlayer.class, MainActivity.class);
-                Log.d("SS", "MainActivity.onClick:MediaPlayer = " + MediaPlayer.class.getClassLoader() + "");
-                Log.d("SS", "MainActivity.onClick:MainActivity = " + MainActivity.class.getClassLoader() + "");
-//                AllocTest.test();
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                AllocTest.testAllocMemory();
             }
         });
-        dumpDexPathList();
+        getSign(this);
     }
 
-    private void dumpDexPathList() {
+    private void getSign(Context context) {
+        String signature_key = "";
         try {
-            ClassLoader loader = getApplication().getClassLoader();
-            Field pathList = loader.getClass().getSuperclass().getDeclaredField("pathList");
-            pathList.setAccessible(true);
-            Object pathListObj = pathList.get(loader);
-            Field dexElements = pathListObj.getClass().getDeclaredField("dexElements");
-            dexElements.setAccessible(true);
-            Object[] list = (Object[]) dexElements.get(pathListObj);
-            Log.e("SS", Arrays.toString(list) + "");
-        } catch (Exception e) {
+            PackageInfo packageInfo = context.getPackageManager().getPackageInfo(context.getPackageName(), PackageManager.GET_SIGNATURES);
+            Signature[] signatures = packageInfo.signatures;
+            if (signatures != null && signatures.length > 0) {
+                Log.d("TR", "MainActivity.getSign:" + signatures[0].toCharsString());
+                MessageDigest localMessageDigest = MessageDigest.getInstance("MD5");
+                localMessageDigest.update(signatures[0].toByteArray());
+                // 这个就是签名的md5值
+                String str2 = toHex(localMessageDigest.digest());
+                Log.d("TR", "MainActivity.getSign:" + str2);
+            }
+        } catch (Throwable e) {
             e.printStackTrace();
-            Log.e("SS", Log.getStackTraceString(e));
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+    private String toHex(byte[] paramArrayOfByte) {
+        StringBuilder localStringBuffer = new StringBuilder();
+        for (int i = 0; i < paramArrayOfByte.length; i++) {
+            Object[] arrayOfObject = new Object[1];
+            arrayOfObject[0] = paramArrayOfByte[i];
+            localStringBuffer.append(String.format("%02x", arrayOfObject));
         }
-
-        return super.onOptionsItemSelected(item);
+        return localStringBuffer.toString();
     }
 }
