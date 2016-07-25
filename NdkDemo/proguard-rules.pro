@@ -19,7 +19,7 @@
 # 忽略警告
 -ignorewarnings
 
--keepclasseswithmembernames class * {
+-keepclasseswithmembernames class com.johnnyyin.ndkdemo.AllocTest {
     native <methods>;
 }
 

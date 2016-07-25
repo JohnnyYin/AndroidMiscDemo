@@ -5,6 +5,8 @@ public class AllocTest {
         System.loadLibrary("test");
     }
 
+    public static native String hi();
+
     public static native void testAllocMemory();
 
 }

@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import java.security.MessageDigest;
 
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AllocTest.testAllocMemory();
+                Toast.makeText(MainActivity.this, AllocTest.hi(), Toast.LENGTH_SHORT).show();
             }
         });
         getSign(this);
