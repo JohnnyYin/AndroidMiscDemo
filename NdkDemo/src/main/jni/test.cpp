@@ -11,6 +11,11 @@
 // debug开关
 #define DEBUG true
 
+// 使用编译脚本控制的宏
+#ifndef CHECK_SIGN
+#define CHECK_SIGN false
+#endif
+
 // 应用的正式签名
 #define SIGN_HEX "95D866E6B6EC18A80A041D89E65A4CA3"
 
@@ -72,6 +77,11 @@ void byteToHexStr(const unsigned char *source, char *dest, int sourceLen) {
  * 初始化, 校验签名
  */
 void checkSign(JNIEnv *env) {
+    if (!CHECK_SIGN) {
+        if (DEBUG)
+            ALOGD("skip check sign.");
+        return;
+    }
     int result = JNI_FALSE;
     jclass clsApplication = env->FindClass("com/johnnyyin/ndkdemo/DemoApplication");
     // "()Lcom/johnnyyin/ndkdemo/DemoApplication;"
