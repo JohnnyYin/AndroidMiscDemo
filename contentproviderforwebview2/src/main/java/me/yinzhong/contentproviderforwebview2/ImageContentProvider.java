@@ -1,4 +1,4 @@
-package bytedance.contentproviderforwebview2;
+package me.yinzhong.contentproviderforwebview2;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;
