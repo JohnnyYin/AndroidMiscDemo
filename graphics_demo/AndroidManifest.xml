@@ -42,6 +42,10 @@
             android:name="com.example.graphics_demo.ScaleLayoutActivity"
             android:label="@string/title_activity_scale_layout" >
         </activity>
+        <activity
+            android:name="com.example.graphics_demo.TagActivity"
+            android:label="@string/title_activity_tag" >
+        </activity>
     </application>
 
 </manifest>

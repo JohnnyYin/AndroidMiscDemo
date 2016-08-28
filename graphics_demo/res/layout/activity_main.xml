@@ -35,4 +35,10 @@
         android:layout_height="wrap_content"
         android:text="可缩放的layout演示" />
 
+    <Button
+        android:id="@+id/tag_anim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tag动画" />
+
 </LinearLayout>

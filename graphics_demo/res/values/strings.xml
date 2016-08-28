@@ -9,5 +9,6 @@
     <string name="title_activity_xfermode">XfermodeActivity</string>
     <string name="title_activity_pie_chart">PieChartActivity</string>
     <string name="title_activity_scale_layout">ScaleLayoutActivity</string>
+    <string name="title_activity_tag">TagActivity</string>
 
 </resources>
