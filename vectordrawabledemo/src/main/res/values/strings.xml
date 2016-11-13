@@ -4,6 +4,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
-    <string name="path_pause">M 6,19 L 10,19 L 10,5 L 6,5 L 6,19 z M 14,19 L 18,19 L 18,5 L 14,5 L 14,19 z</string>
+    <!--<string name="path_pause">M 6,19 L 10,19 L 10,5 L 6,5 L 6,19 z M 14,19 L 18,19 L 18,5 L 14,5 L 14,19 z</string>-->
+    <string name="path_pause">M 5,6 L 19,6 L 19,10 L 5,10 L 5,6 z M 5,14 L 19,14 L 19,18 L 5,18 L 5,14 z </string>
     <string name="path_play">M 5, 18.06 L 12,18.06 L 12,5.94 L 12,5.94 L 5,18.06 z M 12,18.06 L 19,18.06 L 12,5.94 L 12,5.94 L 12,18.06 z</string>
 </resources>
