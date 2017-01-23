@@ -2,8 +2,6 @@ package me.yinzhong.coordinatorlayoutdemo;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -17,14 +15,6 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "test", Snackbar.LENGTH_SHORT).show();
-            }
-        });
     }
 
     public void onClick(View view) {
@@ -32,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
         switch (id) {
             case R.id.test1:
                 startActivity(new Intent(this, Test1Activity.class));
+                break;
+            case R.id.test2:
+                startActivity(new Intent(this, Test2Activity.class));
                 break;
         }
     }
