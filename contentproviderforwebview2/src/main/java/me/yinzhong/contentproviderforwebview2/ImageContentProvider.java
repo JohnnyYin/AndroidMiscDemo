@@ -7,7 +7,9 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Environment;
 import android.os.ParcelFileDescriptor;
+import android.os.Process;
 import android.text.TextUtils;
+import android.util.AndroidRuntimeException;
 import android.util.Log;
 
 import java.io.File;
@@ -35,6 +37,12 @@ public class ImageContentProvider extends ContentProvider {
 
     @Override
     public Uri insert(Uri uri, ContentValues values) {
+        Log.d("SS", "ImageContentProvider.insert:" + uri);
+        if ("/crash".equals(uri.getPath())) {
+            Log.d("SS", "ImageContentProvider.insert:crash");
+            Process.killProcess(Process.myPid());
+            throw new AndroidRuntimeException("test crash.");
+        }
         return null;
     }
 
@@ -51,6 +59,10 @@ public class ImageContentProvider extends ContentProvider {
     @Override
     public ParcelFileDescriptor openFile(Uri uri, String mode) throws FileNotFoundException {
         Log.d("SS", "ImageContentProvider.openFile:" + uri);
+        if ("/crash".equals(uri.getPath())) {
+            Log.d("SS", "ImageContentProvider.openFile:crash");
+            throw new RuntimeException("test crash.");
+        }
         Intent intent = new Intent(getContext(), MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         getContext().startActivity(intent);

@@ -3,7 +3,7 @@ apply plugin: 'com.uphyca.android-aspectj'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.3"
+    buildToolsVersion '25.0.2'
 
     defaultConfig {
         applicationId "com.johnnyyin.aspectjdemo"
@@ -25,7 +25,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.0'
+        classpath 'com.android.tools.build:gradle:2.3.0-rc1'
         classpath 'com.uphyca.gradle:gradle-android-aspectj-plugin:0.9.14'
     }
 

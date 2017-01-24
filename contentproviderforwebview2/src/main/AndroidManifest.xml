@@ -19,6 +19,7 @@
         <provider
             android:name="me.yinzhong.contentproviderforwebview2.ImageContentProvider"
             android:authorities="me.yinzhong.contentproviderforwebview2.ImageContentProvider"
+            android:process=":work"
             android:exported="true" />
         
     </application>
